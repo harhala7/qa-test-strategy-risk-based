@@ -22,16 +22,16 @@ Priority is derived from impact × likelihood.
 
 ## Identified risks
 
-| ID | Risk description | Impact | Likelihood | Priority | Mitigation approach |
-|----|------------------|--------|------------|----------|---------------------|
-| R1 | Telemetry data loss during device communication | High | Medium | High | Contract validation, message acknowledgment checks, monitoring of ingestion pipeline |
-| R2 | Corrupted or inconsistent telemetry data | High | Low | Medium | Validation rules, backend integrity checks, anomaly detection |
-| R3 | Unauthorized access to device data | High | Medium | High | Role-based access control testing, security validation, audit logging |
-| R4 | Multi-tenant data leakage | High | Low | High | Isolation tests, tenant boundary validation, strict API authorization checks |
-| R5 | Device configuration updates not applied correctly | Medium | Medium | Medium | API-level validation, device acknowledgment confirmation |
-| R6 | Platform performance degradation with fleet growth | High | Medium | High | Load testing, monitoring of latency and throughput |
-| R7 | Monitoring gaps leading to late detection of failures | Medium | Medium | Medium | Alert validation, observability review |
-| R8 | SLA breach due to infrastructure instability | High | Low | Medium | Uptime monitoring, failover testing |
+| ID | Risk description | Impact | Likelihood | Priority | Mitigation approach | Evidence / Signals |
+|----|------------------|--------|------------|----------|---------------------|--------------------|
+| R1 | Telemetry data loss | High | Medium | High | Contract validation, ingestion monitoring | Ingestion success rate, lag metrics, dropped message alerts |
+| R2 | Corrupted telemetry data | High | Low | Medium | Validation rules, integrity checks | Data anomaly detection, checksum mismatch |
+| R3 | Unauthorized access | High | Medium | High | RBAC testing, audit logging | Failed auth spikes, unauthorized access logs |
+| R4 | Multi-tenant data leakage | High | Low | High | Isolation boundary validation | Cross-tenant access attempt logs |
+| R5 | Device config not applied | Medium | Medium | Medium | API + acknowledgment validation | Config failure rate, missing acknowledgments |
+| R6 | Performance degradation | High | Medium | High | Load + observability | Latency thresholds, throughput drop alerts |
+| R7 | Monitoring gaps | Medium | Medium | Medium | Alert validation review | Missing alert coverage, detection delay KPI |
+| R8 | SLA breach | High | Low | Medium | Uptime monitoring | SLA dashboard %, uptime alerts |
 
 ---
 

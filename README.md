@@ -74,6 +74,17 @@ If you only have 5 minutes, read in this order:
 
 ---
 
+## Key strategic artifacts
+
+These documents demonstrate leadership-level thinking and trade-off awareness:
+
+- Decision log: `00-overview/05-decision-log.md`
+- Product comparison (E-commerce vs IoT SaaS): `00-overview/06-product-comparison.md`
+
+They highlight why specific quality decisions were made and how strategy adapts to different business models.
+
+---
+
 ## Current status
 
 Implemented:
